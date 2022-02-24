@@ -34,14 +34,18 @@ class _LoginScreenState extends State<LoginScreen> {
                   }
                   return null;
                 },
-                onSaved: (value){
+                onSaved: (value) {
                   print("Name field is Saved");
                 },
                 controller: nameController,
                 decoration: InputDecoration(
                   labelText: "Name",
                   border: OutlineInputBorder(),
+                  hintText: "Write your  full name",
+                  prefixIcon: Icon(Icons.person),
                 ),
+                keyboardType: TextInputType.text,
+                maxLength: 15,
               ),
               SizedBox(height: 15),
               TextFormField(
@@ -51,19 +55,45 @@ class _LoginScreenState extends State<LoginScreen> {
                   }
                   return null;
                 },
-                onSaved: (value){
+                onSaved: (value) {
                   print("Password field is Saved");
                 },
                 controller: passwordController,
                 decoration: InputDecoration(
                   labelText: "Password",
                   border: OutlineInputBorder(),
+                  helperText: "Password > 3 characters",
                 ),
+                obscureText: true,
               ),
               ElevatedButton(
                   onPressed: () {
                     if (_formkey.currentState!.validate() == true) {
                       _formkey.currentState!.save();
+                      showDialog(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                          title: Text("Thank you"),
+                          content: Text("Form Submitted Successfully"),
+                          actions: [
+                            ElevatedButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text("Okay"))
+                          ],
+                          backgroundColor: Colors.indigo,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
+                        ),
+                      );
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text("Form Submitted Successfully"),
+                          backgroundColor: Colors.green,
+                          duration: Duration(seconds: 5),
+                        ),
+                      );
                       print("Form Submitted Successfully");
                     }
                   },
