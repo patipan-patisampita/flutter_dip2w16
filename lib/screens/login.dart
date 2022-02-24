@@ -9,6 +9,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Login Screen"),
+        backgroundColor: Colors.purple,
       ),
       body: Text("Login Screen"),
     );

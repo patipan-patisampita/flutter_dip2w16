@@ -9,6 +9,7 @@ class ContactScren extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Contact Screen"),
+        backgroundColor: Colors.red,
       ),
       body: Text("Contact Screen"),
     );

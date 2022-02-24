@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       //home: HomeScreen(),
-      initialRoute: '/',
+      initialRoute:'/',
       routes: {
         '/':(context) => HomeScreen(),
         //HomeScreen.id:(context) => HomeScreen(),
@@ -26,7 +26,6 @@ class MyApp extends StatelessWidget {
         ProfileScreen.id:(context) => ProfileScreen(),
         ContactScren.id:(context) => ContactScren(),
         LoginScreen.id:(context) => LoginScreen(),
-        FirstScreen.id:(context) => FirstScreen(),
       },
     );
   }
