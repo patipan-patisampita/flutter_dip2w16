@@ -22,7 +22,7 @@ class StreamScreen extends StatelessWidget {
     }
   }
 
-  Stream myStrea() async* {
+  Stream myStream() async* {
     for (var i = 0; i < 10; i++) {
       yield i;
       await Future.delayed(Duration(seconds: 2));
@@ -47,7 +47,7 @@ class StreamScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             StreamBuilder(
-              stream: myStrea(),
+              stream: myStream(),
               builder: (contex,AsyncSnapshot snapshot){
                 if(snapshot.hasData){
                   return Text(snapshot.data.toString());
