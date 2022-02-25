@@ -6,6 +6,7 @@ import 'screens/future_screen.dart';
 import 'screens/home.dart';
 import 'screens/login.dart';
 import 'screens/profile.dart';
+import 'screens/stream_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => HomeScreen(),
         FutureScreen.id: (context) => FutureScreen(),
+        StreamScreen.id:(context) => StreamScreen(),
         //HomeScreen.id:(context) => HomeScreen(),
         '/first': (context) => FirstScreen(),
         ProfileScreen.id: (context) => ProfileScreen(),

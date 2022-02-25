@@ -5,6 +5,7 @@ import 'first_screen.dart';
 import 'future_screen.dart';
 import 'login.dart';
 import 'profile.dart';
+import 'stream_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   static String id = '/home';
@@ -22,7 +23,8 @@ class _HomeScreenState extends State<HomeScreen> {
     ProfileScreen(),
     ContactScren(),
     LoginScreen(),
-    FutureScreen()
+    FutureScreen(),
+    StreamScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -92,6 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(icon: Icon(Icons.call), label: "Contact", backgroundColor: Colors.red),
           BottomNavigationBarItem(icon: Icon(Icons.access_alarms), label: "Login", backgroundColor: Colors.purple),
           BottomNavigationBarItem(icon: Icon(Icons.account_balance), label: "Future", backgroundColor: Colors.teal),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Future", backgroundColor: Colors.amber),
         ],
         onTap: (index){
           setState(() {
