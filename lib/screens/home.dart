@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'contact.dart';
 import 'first_screen.dart';
+import 'future_screen.dart';
 import 'login.dart';
 import 'profile.dart';
 
@@ -20,7 +21,8 @@ class _HomeScreenState extends State<HomeScreen> {
     FirstScreen(),
     ProfileScreen(),
     ContactScren(),
-    LoginScreen()
+    LoginScreen(),
+    FutureScreen()
   ];
   @override
   Widget build(BuildContext context) {
@@ -89,6 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(icon: Icon(Icons.ac_unit), label: "Profile", backgroundColor: Colors.green),
           BottomNavigationBarItem(icon: Icon(Icons.call), label: "Contact", backgroundColor: Colors.red),
           BottomNavigationBarItem(icon: Icon(Icons.access_alarms), label: "Login", backgroundColor: Colors.purple),
+          BottomNavigationBarItem(icon: Icon(Icons.account_balance), label: "Future", backgroundColor: Colors.teal),
         ],
         onTap: (index){
           setState(() {

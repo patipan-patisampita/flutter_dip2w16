@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'screens/contact.dart';
 import 'screens/first_screen.dart';
+import 'screens/future_screen.dart';
 import 'screens/home.dart';
 import 'screens/login.dart';
 import 'screens/profile.dart';
@@ -18,14 +19,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       //home: HomeScreen(),
-      initialRoute:'/',
+      initialRoute: '/',
       routes: {
-        '/':(context) => HomeScreen(),
+        '/': (context) => HomeScreen(),
+        FutureScreen.id: (context) => FutureScreen(),
         //HomeScreen.id:(context) => HomeScreen(),
-        '/first':(context) => FirstScreen(),
-        ProfileScreen.id:(context) => ProfileScreen(),
-        ContactScren.id:(context) => ContactScren(),
-        LoginScreen.id:(context) => LoginScreen(),
+        '/first': (context) => FirstScreen(),
+        ProfileScreen.id: (context) => ProfileScreen(),
+        ContactScren.id: (context) => ContactScren(),
+        LoginScreen.id: (context) => LoginScreen(),
       },
     );
   }
